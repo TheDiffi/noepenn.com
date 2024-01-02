@@ -30,12 +30,15 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 100vw;
+    
 }
 
 #section1 {
     border-radius: 0rem 0rem 7.875rem 7.875rem;
-    background: radial-gradient(192.1% 114.75% at 19.13% 14.9%, #010314 51.15%, #4523A6 72.54%, #EEE8FD 100%);
+    background: radial-gradient(100.1% 124.75% at 19.13% 14.9%, #010314 51.15%, #4523A6 72.54%, #EEE8FD 100%);
     flex-direction: row !important;
+    height: 30rem;
+
 }
 
 .droneImage {
@@ -124,7 +127,7 @@ a {
 .title {
     display: flex;
     font-size: 2rem;
-    color: var(--black);
+    color: var(--white);
     text-align: left;
     cursor: default;
     z-index: 1;
@@ -168,7 +171,6 @@ a {
 
 #video-container{
     width: 80%;
-    overflow: hidden;
     opacity: 70%;  
 
 

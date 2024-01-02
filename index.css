@@ -124,7 +124,7 @@ a {
 .title {
     display: flex;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--black);
     text-align: left;
     cursor: default;
     z-index: 1;

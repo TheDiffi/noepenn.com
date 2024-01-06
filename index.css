@@ -1,70 +1,209 @@
-:root{
-    --round-corner-radius:20px;
-    --white: #EEE8FD;
-    --primary: #8A62F2;
-    --secondary: #4523A6;
-    --black: #010314;
-    --transparent: rgba(0, 0, 0, 0);
+:root {
+  --round-corner-radius: 20px;
+  --white: #EEE8FD;
+  --primary: #8A62F2;
+  --secondary: #4523A6;
+  --black: #010314;
+  --transparent: rgba(0, 0, 0, 0);
 
-    
+
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
+
+
+
 
 
 
 body {
-    background-image: radial-gradient(closest-side at 60% 25%, #3f4263, #313347, #1d1f2e, var(--black));
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
+  background-color: var(--black);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  text-decoration: none;
+  border: none;
 }
 
-.section{
-    width: 100%;
-    padding: 30px;
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100vw;
-    
+
+#navbar {
+  background-color: var(--black);
+  position: fixed;
+  top: -55px;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 5;
 }
 
-#section1 {
-    border-radius: 0rem 0rem 7.875rem 7.875rem;
-    background: radial-gradient(100.1% 124.75% at 19.13% 14.9%, #010314 51.15%, #4523A6 72.54%, #EEE8FD 100%);
-    flex-direction: row !important;
-    height: 30rem;
+#navbar a {
+  float: left;
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.topnav a.active {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.section {
+  width: 100%;
+  padding-top: 0px;
+  margin-bottom: 20rem;
+  -webkit-text-fill-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100vw;
+
 
 }
 
-.droneImage {
-    position: relative;
-    width: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    filter: brightness(40%);
-    filter: saturate(150%);
-    filter: blur(px);
-    left: 100px;
-    
-    
+@keyframes textcolorchanger {
+  from {
+    color: var(--black)
+  }
+
+  0% {
+    color: var(--black)
+  }
+
+  100% {
+    color: var(--white);
+  }
 }
+
+
+.penn {
+  color: var(--black);
+  animation-name: textcolorchanger;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.9s;
+}
+
+.noe {
+  color: var(--black);
+  animation-name: textcolorchanger;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.9s;
+}
+
+h1 {
+  line-height: normal;
+  z-index: 4;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 700;
+
+
+}
+
+
+
+#myName {
+  display: flex;
+  color: var(--black);
+  position: absolute;
+  left: 50%;
+  z-index: 4;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.8125rem;
+  border: 2px solid var(--white);
+  background: rgba(217, 217, 217, 0.00);
+  width: 60vw;
+  height: 15vh;
+}
+
+@keyframes box1 {
+  from {
+    transform: translateY(0)
+  }
+
+  20% {
+    transform: translateY(0%)
+  }
+
+  100% {
+    transform: translateY(-100%)
+  }
+
+
+}
+
+.box1 {
+
+
+  position: fixed;
+  width: 100%;
+  height: 110%;
+  flex-shrink: 0;
+  background: #EEE8FD;
+  z-index: 3;
+  animation-name: box1;
+  animation-delay: 1.5s;
+  animation-duration: 5.3s;
+  animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+  animation-fill-mode: forwards;
+}
+
+
+.video-container {
+  width: 100vw;
+  z-index: -2;
+  overflow: hidden;
+  height: 100vh;
+  background-color: linear-gradient(180deg, rgba(242, 33, 33, 0.00) 79%, rgba(242, 33, 33, 0.72) 100%); 
+  
+
+}
+
+.vignette{
+  position: absolute;
+  width: 100vw;
+  z-index: 5;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(46, 46, 46, 0) 79%, var(--black) 100%);
+}
+
+iframe {
+  position: relative;
+  width: 110%;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;    
+  aspect-ratio: 16 / 9;
+}
+
 
 
 
 #cards {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-  
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
 
 
 
@@ -72,122 +211,124 @@ body {
 }
 
 .card {
-    width: 260px;
-    height: 300px;
-    border-radius: var(--round-corner-radius);
-    border: 2px solid rgb(54, 50, 50);
-    box-sizing: border-box;
-    cursor: pointer;
-    transition-duration: 0.5s;
-    text-align: center;
-    color: aliceblue;
-    font-weight: bold;
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-    filter: grayscale();
+  width: 260px;
+  height: 300px;
+  border-radius: var(--round-corner-radius);
+  border: 2px solid var(--secondary);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  text-align: center;
+  background-color: var(--white);
+  padding: 20px;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale();
 }
 
 a {
 
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card1 {
-    background-image: url("goggles\ v2.jpeg");
-    /* height: 300px; */
+  background-image: url("goggles\ v2.jpeg");
+  /* height: 300px; */
 
 }
 
 .card2 {
-    background-image: url("fpvdrone.jpg");
-    /* height: 300px; */
+  background-image: url("fpvdrone.jpg");
+  /* height: 300px; */
 
 }
 
 .card3 {
-    background-image: url("controller.jpg");
-    /* height: 300px; */
+  background-image: url("controller.jpg");
+  /* height: 300px; */
 }
 
 .card4 {
-    background-image: url("smoke.jpg");
-    /*height: 300px;*/
+  background-image: url("smoke.jpg");
+  /*height: 300px;*/
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    opacity: 100%;
-    border: 2px solid rgba(218, 213, 213, 0.55);
-    filter: grayscale(0);
+  transform: translateY(-10px);
+  opacity: 100%;
+  border: 2px solid rgba(218, 213, 213, 0.55);
+  filter: grayscale(0);
 
 
 }
 
 .title {
-    display: flex;
-    font-size: 2rem;
-    color: var(--white);
-    text-align: left;
-    cursor: default;
-    z-index: 1;
-    width: 570px;
-    padding: 40px;
+  display: flex;
+  font-size: 2rem;
+  color: var(--white);
+  text-align: left;
+  cursor: default;
+  z-index: 1;
+  width: 570px;
+  padding: 40px;
 }
 
-.title > h1 > span:hover{
-    color: rgba(218, 213, 213, .0);
-    -webkit-text-stroke: 2px var(--white);
-    transform: rotate(20deg);
-    animation: upAndRotate 0.3s ease-in-out forwards;
+.title>h1>span:hover {
+  color: rgba(218, 213, 213, .0);
+  -webkit-text-stroke: 2px var(--white);
+  transform: rotate(20deg);
+  animation: upAndRotate 0.3s ease-in-out forwards;
 
-
-}
-
-.title > h1 > span{
-    display: inline-block;
-    -webkit-text-stroke: 2px rgba(0, 0, 0, .0);
-    transition-duration:0.3s;
-
-    
-}
-
-@keyframes upAndRotate {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-4px) rotate(1deg);
-    }
-
-    
-    100% {
-        transform: translateY(-4px) rotate(2deg);
-    }
 
 }
 
-
-#video-container{
-    width: 80%;
-    opacity: 70%;  
-
-
-      
-}
-
-video {
-    width: 100%;
-    object-fit: fill;
-    border-radius: var(--round-corner-radius);
-}
 
 
 @media only screen and (max-width: 600px) {
-    .title {
-        
-        font-size: 1rem;
-        
-    }
-} 
+
+  .card{
+    filter: none;
+    
+  }
+
+  #myName {
+    width: 95vw !important;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .title {
+
+
+
+    font-size: 1rem;
+
+
+
+  }
+
+  .video-container iframe {
+    width: 500% !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  .video-container {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    height: 56.25vw;
+
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 177.78vh;
+  }
+}

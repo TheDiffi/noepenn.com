@@ -22,7 +22,7 @@
 
 body {
   background-color: var(--black);
-  font-family: "League Spartan", system-ui, sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 0;
   overflow-x: hidden;
   text-decoration: none;

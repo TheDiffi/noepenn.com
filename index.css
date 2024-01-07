@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
+
 :root {
   --round-corner-radius: 20px;
   --white: #EEE8FD;
@@ -20,7 +22,7 @@
 
 body {
   background-color: var(--black);
-  font-family: 'Poppins', sans-serif;
+  font-family: "League Spartan", system-ui, sans-serif;
   margin: 0;
   overflow-x: hidden;
   text-decoration: none;
@@ -47,8 +49,8 @@ body {
 }
 
 .topnav a:hover {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--primary);
+  color: var(--primary);
 }
 
 .topnav a.active {
@@ -69,37 +71,76 @@ body {
 
 }
 
-@keyframes textcolorchanger {
-  from {
-    color: var(--black)
-  }
 
+@keyframes slide-in-top {
   0% {
-    color: var(--black)
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidecolor {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+    color: var(--black);
+  }
+
+  70% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  90% {
+    color: var(--black);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
     color: var(--white);
   }
 }
 
 
-.penn {
-  color: var(--black);
-  animation-name: textcolorchanger;
-  animation-duration: 0.6s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-delay: 2.9s;
+
+
+
+
+
+.noepenn span {
+  opacity: 0;
 }
 
-.noe {
-  color: var(--black);
-  animation-name: textcolorchanger;
-  animation-duration: 0.6s;
-  animation-timing-function: ease-in-out;
+
+.noepenn {
+
+  animation-name: slide-in-top;
+  animation-direction: reverse;
+  animation-duration: 3s;
+  animation-delay: .2s;
   animation-fill-mode: forwards;
-  animation-delay: 2.9s;
+  animation-timing-function: ease-out;
+}
+
+
+#noepenndown {
+  position: absolute;
+  animation-name: slidecolor;
+  animation-direction: normal !important;
+  animation-duration: 3.3s;
+  animation-delay: 1ms;
+
 }
 
 h1 {
@@ -147,6 +188,20 @@ h1 {
 
 }
 
+.textcrop {
+  position: fixed;
+  width: 100%;
+  height: 45%;
+  flex-shrink: 0;
+  background: var(--white);
+  z-index: 6;
+  animation-name: box1;
+  animation-delay: 1.5s;
+  animation-duration: 5.3s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
+}
+
 .box1 {
 
 
@@ -154,12 +209,12 @@ h1 {
   width: 100%;
   height: 110%;
   flex-shrink: 0;
-  background: #EEE8FD;
+  background: var(--white);
   z-index: 3;
   animation-name: box1;
   animation-delay: 1.5s;
   animation-duration: 5.3s;
-  animation-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   animation-fill-mode: forwards;
 }
 
@@ -169,12 +224,12 @@ h1 {
   z-index: -2;
   overflow: hidden;
   height: 100vh;
-  background-color: linear-gradient(180deg, rgba(242, 33, 33, 0.00) 79%, rgba(242, 33, 33, 0.72) 100%); 
-  
+  background-color: linear-gradient(180deg, rgba(242, 33, 33, 0.00) 79%, rgba(242, 33, 33, 0.72) 100%);
+
 
 }
 
-.vignette{
+.vignette {
   position: absolute;
   width: 100vw;
   z-index: 5;
@@ -189,7 +244,7 @@ iframe {
   top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
-  pointer-events: none;    
+  pointer-events: none;
   aspect-ratio: 16 / 9;
 }
 
@@ -286,9 +341,9 @@ a {
 
 @media only screen and (max-width: 600px) {
 
-  .card{
+  .card {
     filter: none;
-    
+
   }
 
   #myName {

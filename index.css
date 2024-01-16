@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
 
 :root {
-  --round-corner-radius: 20px;
+  --round-corner-radius: 1.8rem;
   --white: #EEE8FD;
   --primary: #8A62F2;
   --secondary: #4523A6;
@@ -165,10 +165,11 @@ h1 {
   transform: translate(-50%, -50%);
   align-items: center;
   justify-content: center;
-  border-radius: 1.8125rem;
+  border-radius: var(--round-corner-radius);
   border: 2px solid var(--white);
   background: rgba(217, 217, 217, 0.00);
-  width: 60vw;
+  
+  width: 70%;
   height: 15vh;
 }
 
@@ -220,11 +221,10 @@ h1 {
 
 
 .video-container {
-  width: 100vw;
+  height: 100vh;
   z-index: -2;
   overflow: hidden;
   height: 100vh;
-  background-color: linear-gradient(180deg, rgba(242, 33, 33, 0.00) 79%, rgba(242, 33, 33, 0.72) 100%);
 
 
 }
@@ -238,17 +238,33 @@ h1 {
   background: linear-gradient(180deg, rgba(46, 46, 46, 0) 79%, var(--black) 100%);
 }
 
-iframe {
-  position: relative;
-  width: 110%;
-  top: 51%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  aspect-ratio: 16 / 9;
+
+.pattern {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  left: 5vw;
+  top: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0.8;
+  background-image: linear-gradient(#8A62F2 2px, transparent 2px), linear-gradient(90deg, #8b62f28f 2px, transparent 2px);
+  background-position: -.2rem, -.2rem, -.2rem, -.2rem;
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  border-radius: var(--round-corner-radius);
+  
+
 }
 
 
+.opacityVignette {
+  background: radial-gradient(100% 100% at 40% 40%, var(--transparent) 20%, var(--black) 80%);
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
 
 
 #cards {
@@ -258,11 +274,6 @@ iframe {
   justify-content: center;
   align-items: center;
   gap: 8px;
-
-
-
-
-
 }
 
 .card {

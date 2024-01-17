@@ -222,10 +222,9 @@ h1 {
 
 .video-container {
   height: 100vh;
-  z-index: -2;
-  overflow: hidden;
-  height: 100vh;
-
+  width: 100vw;
+  display: block;
+  overflow: hidden !important;
 
 }
 
@@ -367,5 +366,11 @@ a {
 
   .title {
     font-size: 1rem;
+  }
+
+  .video1 {
+    margin-left: -500px;
+    height: 100%;
+
   }
 }

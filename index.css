@@ -229,6 +229,7 @@ h1 {
 }
 
 .video1{
+  height: 100vh;
   position: relative;    
   left: 50%;
   right: 50%;
@@ -311,7 +312,7 @@ a {
 }
 
 .card2 {
-  background-image: url("Gopro.jpg");
+  background-image: url("Gopro.JPG");
   /* height: 300px; */
 
 }

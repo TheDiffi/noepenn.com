@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap");
 
 :root {
-  --round-corner-radius: 1.8rem;
+  --round-corner-radius: 2.8rem;
   --white: #EEE8FD;
   --primary: #8A62F2;
   --secondary: #4523A6;
@@ -22,7 +22,7 @@
 
 body {
   background-color: var(--black);
-  font-family: Poppins, sans-serif;
+  font-family: 'Varela Round', sans-serif;
   margin: 0;
   overflow-x: hidden;
   text-decoration: none;
@@ -166,11 +166,11 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: var(--round-corner-radius);
-  border: 2px solid var(--white);
+  border: 15px solid var(--white);
   background: rgba(217, 217, 217, 0.00);
 
-  width: 70%;
-  height: 15vh;
+  width: 28.9rem;
+  height: 16vh;
 }
 
 @keyframes box1 {
@@ -228,10 +228,18 @@ h1 {
 
 }
 
+.video1{
+  position: relative;    
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
 .vignette {
   position: absolute;
   width: 100vw;
-  z-index: 5;
+  z-index: 2;
   overflow: hidden;
   height: 100vh;
   background: linear-gradient(180deg, rgba(46, 46, 46, 0) 79%, var(--black) 100%);
@@ -297,13 +305,13 @@ a {
 }
 
 .card1 {
-  background-image: url("fpvdrone.JPG");
+  background-image: url("fpvdrone.jpg");
   /* height: 300px; */
 
 }
 
 .card2 {
-  background-image: url("Gopro.JPG");
+  background-image: url("Gopro.jpg");
   /* height: 300px; */
 
 }
@@ -357,7 +365,8 @@ a {
   }
 
   #myName {
-    width: 95vw !important;
+    width: 19.3rem !important;
+    border: 10px solid var(--white);
   }
 
   h1 {
@@ -369,8 +378,14 @@ a {
   }
 
   .video1 {
-    margin-left: -500px;
+   
+
     height: 100%;
 
+  }
+
+  .pattern{
+    width: 80vw;
+    height: 80vh;
   }
 }

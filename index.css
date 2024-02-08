@@ -140,6 +140,7 @@ body {
   animation-direction: normal !important;
   animation-duration: 3.3s;
   animation-delay: 1ms;
+  margin: 0;
 
 }
 
@@ -168,8 +169,8 @@ h1 {
   border-radius: var(--round-corner-radius);
   border: 15px solid var(--white);
   background: rgba(217, 217, 217, 0.00);
-
-  width: 28.9rem;
+  backdrop-filter: blur(5px);
+  padding: 0px 20px 0px 20px;
   height: 16vh;
 }
 
@@ -228,9 +229,9 @@ h1 {
 
 }
 
-.video1{
+.video1 {
   height: 100vh;
-  position: relative;    
+  position: relative;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -366,7 +367,6 @@ a {
   }
 
   #myName {
-    width: 19.3rem !important;
     border: 10px solid var(--white);
   }
 
@@ -379,13 +379,13 @@ a {
   }
 
   .video1 {
-   
+
 
     height: 100%;
 
   }
 
-  .pattern{
+  .pattern {
     width: 80vw;
     height: 80vh;
   }

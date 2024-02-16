@@ -14,6 +14,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -148,7 +149,7 @@ h1 {
   backdrop-filter: blur(5px);
   padding: 0px 20px 0px 20px;
   height: 10vh;
-  box-shadow: 50px 50px 113px #06033300 inset,-50px -50px 110px var(--white) inset;
+  box-shadow: 50px 50px 113px #06033300 inset, -50px -50px 110px rgba(238, 233, 233, 0.541) inset;
 
 }
 
@@ -257,7 +258,7 @@ h1 {
 #cards {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 260px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -295,29 +296,31 @@ a {
 
 }
 
-.showOnHoverCard1{
+.showOnHoverCard1 {
   display: none;
 }
 
-@keyframes opacityChange{
-  from{
+@keyframes opacityChange {
+  from {
     opacity: 0%;
-    }
-
-    to{
-      opacity: 100%;
-    }
   }
 
+  to {
+    opacity: 100%;
+  }
+}
 
 
-.card1:hover + .showOnHoverCard1{
+
+.card1:active,
+.card1:hover+.showOnHoverCard1 {
   animation-name: opacityChange;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
   display: block;
   justify-content: center;
   text-align: center;
-  width: 70%;
+  width: 80vw;
   font-size: 20px;
   font-weight: 700;
   color: #010314;
@@ -330,11 +333,30 @@ a {
 
 }
 
+
 .card3 {
   background-image: url("pictureofme.png");
   /* height: 300px; */
 }
 
+.showOnHoverCard3 {
+  display: none;
+}
+
+.card3:active,
+.card3:hover+.showOnHoverCard3 {
+  animation-name: opacityChange;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  width: 80vw;
+  font-size: 20px;
+  font-weight: 700;
+  color: #010314;
+  margin-bottom: 2vh;
+}
 .card4 {
   background-image: url("smoke.jpg");
   /*height: 300px;*/
@@ -369,7 +391,7 @@ a {
 
 }
 
-#section3{
+#section3 {
   top: 0%;
 }
 
@@ -385,7 +407,7 @@ a {
 
   }
 
- 
+
 
   h1 {
     font-size: 4rem;

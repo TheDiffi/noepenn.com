@@ -33,33 +33,7 @@ body {
 }
 
 
-#navbar {
-  background-color: var(--black);
-  position: fixed;
-  top: -55px;
-  width: 100%;
-  transition: top 0.3s;
-  z-index: 5;
-}
 
-#navbar a {
-  float: left;
-  display: block;
-  color: var(--white);
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  background-color: var(--primary);
-  color: var(--primary);
-}
-
-.topnav a.active {
-  background-color: var(--primary);
-  color: var(--white);
-}
 
 .section {
   width: 100%;
@@ -170,12 +144,11 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: var(--round-corner-radius);
-  border: 15px solid var(--white);
   background: rgba(217, 217, 217, 0.00);
   backdrop-filter: blur(5px);
   padding: 0px 20px 0px 20px;
-  height: 16vh;
-
+  height: 10vh;
+  box-shadow: 50px 50px 113px #06033300 inset,-50px -50px 110px var(--white) inset;
 
 }
 
@@ -299,6 +272,8 @@ h1 {
   box-sizing: border-box;
   cursor: pointer;
   transition-duration: 0.5s;
+  font-size: 20px;
+  font-weight: 900;
   text-align: center;
   background-color: var(--white);
   padding: 20px;
@@ -317,6 +292,35 @@ a {
   background-image: url("fpvdrone.jpg");
   /* height: 300px; */
 
+}
+
+.showOnHoverCard1{
+  display: none;
+}
+
+@keyframes opacityChange{
+  from{
+    opacity: 0%;
+    }
+
+    to{
+      opacity: 100%;
+    }
+  }
+
+
+
+.card1:hover + .showOnHoverCard1{
+  animation-name: opacityChange;
+  animation-duration: 1.5s;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  width: 70%;
+  font-size: 20px;
+  font-weight: 700;
+  color: #010314;
+  margin-bottom: 2vh;
 }
 
 .card2 {
@@ -368,13 +372,6 @@ a {
   top: 0%;
 }
 
-.whatIsFpv {
-  font-size: 20px;
-  position:relative;
-  width: 80%;
-  justify-content: center;
-  text-align: center;
-}
 
 
 
@@ -387,9 +384,7 @@ a {
 
   }
 
-  #myName {
-    border: 10px solid var(--white);
-  }
+ 
 
   h1 {
     font-size: 4rem;

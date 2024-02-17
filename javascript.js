@@ -1,11 +1,10 @@
-window.onscroll = function() {scrollFunction()};
+function menuOnClick() {
+  document.getElementById("menu-bar").classList.toggle("change");
+  document.getElementById("nav").classList.toggle("change");
+  document.getElementById("menu-bg").classList.toggle("change-bg");
+}
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-55px";
-  }
-} 
+//document.getElementById("menu-bar").addEventListener{}//
+
 
 

@@ -123,8 +123,8 @@ section {
 
 .arrowdown {
     position: absolute;
-    width: 100px;
-    bottom: 20px;
+    width: 70px;
+    bottom: 70px;
     transform: rotate(-90deg);
 }
 
